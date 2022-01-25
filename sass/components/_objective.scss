@@ -1,0 +1,57 @@
+.objective {
+  width: 100%;
+  margin-right: 20px;
+  padding: 40px 40px 45px 40px;
+  color: $color--gray;
+  border-radius: 6px;
+  box-shadow: rgba(3, 24, 128, 0.2) 0px 30px 40px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  &:hover {
+    transform: translateY(-10%);
+  }
+  @include breakpoint("phone") {
+    margin-bottom: 20px;
+  }
+  @include breakpoint("touch") {
+    margin-bottom: 20px;
+
+    &:hover {
+      transform: translate(0);
+    }
+  }
+}
+
+.objective--1 {
+  background-color: $color--orange;
+}
+
+.objective--2 {
+  background-color: $color--dark-gray;
+}
+
+.objective--3 {
+  background-color: $color--blue;
+}
+
+.objective--4 {
+  background-color: #00a378;
+}
+
+.objective__icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.objective__title {
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.objective__description {
+  font-size: 14px;
+  color: $color--gray;
+}

@@ -1,0 +1,236 @@
+.modal {
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal--active {
+  display: flex;
+}
+
+.modal--login {
+  position: relative;
+  height: 80%;
+  width: 60%;
+  background-color: white;
+  display: flex;
+
+  @include breakpoint("phone") {
+    width: 90%;
+    flex-direction: column;
+    height: 90%;
+  }
+
+  @include breakpoint("touch") {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+.modal--login__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  i {
+    font-size: 24px;
+  }
+}
+
+.modal--login__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+.modal--login__left {
+  flex-basis: 50%;
+  background-image: url("../../img/register.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal--login__picture {
+  width: 50%;
+}
+
+.modal--login__info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal--login__subtitle {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: $color--dark-gray;
+}
+
+.modal--login__title {
+  font-weight: bold;
+  color: $color--dark-gray;
+}
+
+.modal-login__desc {
+  align-self: flex-start;
+  padding: 0 40px;
+  font-size: 14px;
+}
+
+.modal-login__redirect {
+  font-size: 14px;
+  color: $color--blue;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color--orange;
+  }
+
+  @include breakpoint("phone") {
+    font-size: 14px;
+  }
+}
+
+.modal--register {
+  position: relative;
+  height: 90%;
+  width: 60%;
+  background-color: white;
+  padding: 20px 0;
+  display: flex;
+  @include breakpoint("phone") {
+    width: 90%;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  @include breakpoint("touch") {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+.modal--register__left {
+  flex-basis: 50%;
+  background-image: url("../../img/register.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal--register__right {
+  flex-basis: 50%;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint("touch") {
+    overflow-y: scroll;
+  }
+
+  @include breakpoint("desktop") {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.modal--register__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  i {
+    font-size: 24px;
+  }
+}
+
+.modal--register__info {
+  margin: 20px 0;
+}
+
+.modal--register__title {
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 60px;
+    margin-top: 5px;
+    background: $color--orange;
+  }
+}
+
+.modal-register__redirect {
+  font-size: 14px;
+  color: $color--blue;
+  text-decoration: underline;
+  &:hover {
+    color: $color--orange;
+  }
+
+  @include breakpoint("phone") {
+    font-size: 14px;
+  }
+}
+
+.modal--successfully {
+  background-color: white;
+}
+
+.modal--successfully__container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--successfully__icon {
+  font-size: 64px;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.modal--successfully__container h3 {
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  span {
+    color: green;
+    text-decoration: underline;
+  }
+}
+
+.modal--delete {
+  background: white;
+}
+
+.modal--delete__container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--delete__container h3 {
+  margin-bottom: 20px;
+}

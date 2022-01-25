@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Educave | Course Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./img/Educave.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+  </head>
+
+  <body>
+    <div class="loader__container">
+      <div class="loader"></div>
+    </div>
+    <div class="htop">
+      <div class="wrapper">
+        <div class="htop__container">
+          <div class="htop__left">
+            <div class="htop__block">
+              <i class="far fa-envelope icon htop__icon"></i>
+              <a href="#" class="htop__link">info@educave.com</a>
+            </div>
+          </div>
+          <div class="htop__right">
+            <div class="htop__block">
+              <a href="#" class="htop__link htop__register js-htop-register"
+                >Register</a
+              >
+            </div>
+            <div class="htop__block">
+              <button class="button button--orange htop__login js-htop-login">
+                <i class="far fa-user icon htop__icon"></i>Log In
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__container">
+          <img src="./img/Educave.svg" alt="EduCave" class="header__logo" />
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="./index.html#topCourses" class="nav__link"
+                  >Top Courses</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="./courses.html" class="nav__link">Courses</a>
+              </li>
+              <li class="nav__item">
+                <a href="#testimonial" class="nav__link">Testimonials</a>
+              </li>
+              <li class="nav__item">
+                <a href="./admin.html" class="nav__link">Admin</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="nav__menu">
+            <li class="nav__menu-item js-nav-search">
+              <i class="fas fa-search nav__icon"></i>
+            </li>
+            <li class="nav__menu-item js-user">
+              <i class="far fa-user nav__icon"></i>
+            </li>
+            <li class="nav__menu-item">
+              <i class="fas fa-shopping-basket nav__icon"></i>
+              <div class="basket">
+
+              </div>
+            </li>
+            <li class="nav__menu-item nav__burger js-burger">
+              <i class="fas fa-bars nav__icon"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="search">
+        <div class="wrapper">
+          <div class="search__container">
+            <form action="#" class="form form--nav">
+              <input type="text" class="form--nav__input" />
+              <button class="form--nav__search">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <div class="search__results">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="section-course">
+        <div class="course">
+          <div class="wrapper">
+            <div class="course__container">
+              <div class="course__left">
+                <h2 class="course__title">
+                  The Complete JavaScript Course: 2020 Build Real Projects!
+                </h2>
+                <div class="row course__row">
+                  <div class="course__box--first">
+                    <img src="./img/avatar.png" class="course__avatar" alt="" />
+                    <div class="course__creation">
+                      <h4 class="course__box-title">Created by</h4>
+                      <p class="course__box-desc">John Doe</p>
+                    </div>
+                  </div>
+                  <div class="course__box">
+                    <h4 class="course__box-title">Categories</h4>
+                    <p class="course__box-desc">Web Development</p>
+                  </div>
+                  <div class="course__box">
+                    <h4 class="course__box-title">Review</h4>
+                    <div class="course__stars">
+                      <i class="fas fa-star course__star"></i>
+                      <i class="fas fa-star course__star"></i>
+                      <i class="fas fa-star course__star"></i>
+                      <i class="fas fa-star-half-alt course__star"></i>
+                      <i class="far fa-star course__star"></i>
+                      <span class="course__rate-number">(5400 rates)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row course__overview">
+                  <h3 class="course__overview-title">Course overview</h3>
+                  <p class="course__description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dicta ullam facere ipsa praesentium placeat neque repellat
+                    pariatur optio molestias consequuntur, dolores
+                    necessitatibus dolore vitae architecto maiores incidunt
+                    sapiente quis temporibus vel. Sint similique rerum eius
+                    nihil exercitationem? Adipisci mollitia dolores inventore!
+                    Aspernatur assumenda adipisci hic repellendus illo nulla,
+                    sed velit quos deserunt nobis dolorum sint. Iste rem sequi
+                    fugit repellat magni voluptates eum debitis animi error,
+                    unde perferendis voluptatum illo ex doloribus ipsa est
+                    dolorem doloremque dignissimos sit harum hic. Sed, molestias
+                    possimus, beatae odit ab animi necessitatibus sit harum
+                    commodi omnis ipsa doloribus quia! Ullam officiis, iure
+                    impedit ad neque id dolorum culpa at veniam voluptatem,
+                    vero.
+                  </p>
+                  <p class="course__description">
+                    porro, praesentium cupiditate corrupti? Laudantium, velit
+                    non beatae asperiores quaerat nostrum reprehenderit, laborum
+                    aliquam esse aliquid facilis rem! Iusto suscipit minus quia
+                    illum fuga nam delectus eum labore voluptatem recusandae
+                    rerum, vitae optio est quod molestiae necessitatibus? A
+                    quibusdam eum tempora deleniti, error iste sapiente nulla
+                    quas blanditiis, in consequatur necessitatibus natus at
+                    repellendus placeat esse fugit doloremque nostrum sit? Nam
+                    enim doloremque consequuntur incidunt aliquam at reiciendis.
+                    Odit nisi cupiditate ducimus. Culpa ratione error iusto,
+                    exercitationem eveniet, inventore nostrum veritatis
+                    voluptate optio excepturi officiis quaerat, doloremque
+                    voluptas aspernatur aliquam soluta deserunt? Esse, natus
+                    inventore! Eius modi optio dicta dolorem neque similique
+                    iusto porro fuga nesciunt nemo quaerat vel, animi ab impedit
+                    deleniti accusamus blanditiis exercitationem, voluptatibus
+                    non enim ea culpa nostrum? Dolorum unde laborum, tenetur
+                    repellat aperiam quasi ab, reprehenderit totam harum nemo
+                    odit odio praesentium eaque soluta eveniet quaerat. Ducimus,
+                  </p>
+                </div>
+              </div>
+              <div class="course__right">
+                <div class="course__course">
+                  <div class="course__card">
+                    <img src="./img/cardbg.jpg" alt="" class="course__image" />
+                    <h3 class="course__price">$300.00</h3>
+                    <button class="button course__buy">Buy now</button>
+                    <ul class="course__info">
+                      <li class="course__item">
+                        <p class="course__item-left">
+                          <i class="far fa-clock course__item-icon"></i>
+                          <span class="course__span"> Duration </span>
+                        </p>
+                        <p class="course__item-right">8h 20min</p>
+                      </li>
+                      <li class="course__item">
+                        <p class="course__item-left">
+                          <i class="fas fa-video course__item-icon"></i>
+                          <span class="course__span"> Lectures </span>
+                        </p>
+                        <p class="course__item-right">8h 20min</p>
+                      </li>
+                      <li class="course__item">
+                        <p class="course__item-left">
+                          <i class="fas fa-school course__item-icon"></i>
+                          <span class="course__span"> Enrolled </span>
+                        </p>
+                        <p class="course__item-right">1231</p>
+                      </li>
+                      <li class="course__item">
+                        <p class="course__item-left">
+                          <i class="fas fa-globe-europe course__item-icon"></i>
+                          <span class="course__span"> Language </span>
+                        </p>
+                        <p class="course__item-right">English</p>
+                      </li>
+                      <li class="course__item">
+                        <p class="course__item-left">
+                          <i class="far fa-edit course__item-icon"></i>
+                          <span class="course__span"> Update </span>
+                        </p>
+                        <p class="course__item-right">2021-11-12</p>
+                      </li>
+                      <li class="course__item">
+                        <p class="course__item-left">
+                          <i
+                            class="fas fa-graduation-cap course__item-icon"
+                          ></i>
+                          <span class="course__span"> Certified </span>
+                        </p>
+                        <p class="course__item-right">Yes</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="course__recommended">
+                  <h4>Recommended Courses</h4>
+                  <div class="card--recommended">
+                    <img
+                      src="./img/cardbg.jpg"
+                      alt=""
+                      class="card--recommended__image"
+                    />
+                    <div class="card--recommended__info">
+                      <h3 class="card--recommend__title">
+                        Best JavaScript Course: 2020 New
+                      </h3>
+                      <p class="card--recommended__price">$300</p>
+                    </div>
+                  </div>
+                  <div class="card--recommended">
+                    <img
+                      src="./img/cardbg.jpg"
+                      alt=""
+                      class="card--recommended__image"
+                    />
+                    <div class="card--recommended__info">
+                      <h3 class="card--recommend__title">
+                        Best JavaScript Course: 2020 New
+                      </h3>
+                      <p class="card--recommended__price">$300</p>
+                    </div>
+                  </div>
+                  <div class="card--recommended">
+                    <img
+                      src="./img/cardbg.jpg"
+                      alt=""
+                      class="card--recommended__image"
+                    />
+                    <div class="card--recommended__info">
+                      <h3 class="card--recommend__title">
+                        Best JavaScript Course: 2020 New
+                      </h3>
+                      <p class="card--recommended__price">$300</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__container">
+          <div class="row row--footer">
+            <div class="footer__column">
+              <img src="./img/Educave.svg" class="footer__logo" alt="" />
+              <p class="footer__paragraph">
+                Educave is new online platform for e-learning. We're trying to
+                make a large amount of our clients satisfied and make this world
+                a better place. If you are interested in IT, check out our
+                courses!
+              </p>
+              <ul class="footer__list--row">
+                <li class="footer__item">
+                  <i class="fab fa-facebook-f footer__media"></i>
+                </li>
+                <li class="footer__item">
+                  <i class="fab fa-instagram footer__media"></i>
+                </li>
+                <li class="footer__item">
+                  <i class="fab fa-twitter footer__media"></i>
+                </li>
+                <li class="footer__item">
+                  <i class="fab fa-youtube footer__media"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h4 class="column__title">Address</h4>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <i class="fas fa-map-signs footer__icon"></i>
+                  <p>1254 Granville Lane, New Jersey, New Jesery, USA</p>
+                </li>
+                <li class="footer__item">
+                  <i class="fas fa-phone footer__icon"></i>
+                  <p>1254 Granville Lane, New Jersey, New Jesery, USA</p>
+                </li>
+                <li class="footer__item">
+                  <i class="far fa-envelope icon footer__icon"> </i>
+                  <p>mail@mail.com</p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h4 class="column__title">Courses</h4>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__bottom">
+      <div class="wrapper">
+        <div class="footer__row footer__row--bottom">
+          <p class="footer__copyright">Copyright 2021 Educave &copy;</p>
+          <a href="www.rilak.dev" _target="blank" class="footer__developer"
+            >Designed by <span>RilakDev</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="modal js-modal-login">
+      <div class="modal--login">
+        <button class="modal--login__close js-modal-close">
+          <i class="fas fa-window-close"></i>
+        </button>
+        <div class="modal--login__left"></div>
+        <div class="modal--login__right">
+          <div class="modal--login__info">
+            <h4 class="modal--login__subtitle">Welcome back</h4>
+            <h3 class="modal--login__title">Log into your account</h3>
+          </div>
+          <form action="#" class="form form--login">
+            <div class="form--login__box">
+              <label for="email" class="form--login__label"
+                >E-mail or Username</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form--login__input"
+                placeholder="Enter your e-mail or username"
+                required
+              />
+              <p class="form-text__error"></p>
+            </div>
+            <div class="form--login__box">
+              <div class="form--login__label-box">
+                <label for="password" class="form--login__label">Password</label>
+                <a href="#">Forgot your password?</a>
+              </div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form--login__input"
+                placeholder="Enter your password"
+                required
+              />
+              <p class="form-text__error"></p>
+              <button
+                class="
+                  button button__rounded button--orange
+                  form--login__submit
+                "
+                type="submit"
+              >
+                Log in now
+              </button>
+            </div>
+          </form>
+          <p class="modal-login__desc">
+            Not registered yet?
+            <a href="#" class="modal-login__redirect js-redirect-to-register"
+              >Register now!</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal-register">
+      <div class="modal--register">
+        <button class="modal--register__close js-modal-close">
+          <i class="fas fa-window-close"></i>
+        </button>
+        <div class="modal--register__left"></div>
+        <div class="modal--register__right">
+          <div class="modal--register__info">
+            <h3 class="modal--register__title">Sign Up</h3>
+          </div>
+          <form action="#" class="form form--register">
+            <div class="form--register__box">
+              <div class="form--register__halfbox">
+                <label for="name" class="form--register__label">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form--register__input--half js-form-register-input"
+                  name="name"
+                  placeholder="What is your name?"
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+              <div class="form--register__halfbox">
+                <label for="lastname" class="form--register__label"
+                  >Last name</label
+                >
+                <input
+                  id="lastname"
+                  type="text"
+                  class="form--register__input--half js-form-register-input"
+                  name="name"
+                  placeholder="What is your lastname?"
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+            </div>
+            <div class="form--register__box form--register__singlebox">
+              <label for="username" class="form--register__label"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form--register__input js-form-register-input"
+                name="username"
+                id="username"
+                placeholder="What is your username?"
+                required
+              />
+              <p class="form-text__error">&nbsp;</p>
+            </div>
+            <div class="form--register__box">
+              <div class="form--register__halfbox">
+                <label for="mail" class="form--register__label">Email</label>
+                <input
+                  type="email"
+                  class="form--register__input--half js-form-register-input"
+                  id="mail"
+                  name="mail"
+                  placeholder="What is your e-mail?"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+              <div class="form--register__halfbox">
+                <label for="password" class="form--register__label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form--register__input--half js-form-register-input"
+                  name="password"
+                  id="password"
+                  placeholder="What is your password?"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+            </div>
+            <div class="form--register__box">
+              <div class="form--register__halfbox">
+                <label for="dob" class="form--register__label"
+                  >Date of birth</label
+                >
+                <input
+                  type="date"
+                  class="form--register__input--half js-form-register-input"
+                  name="dob"
+                  id="dob"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+              <div class="form--register__halfbox">
+                <label for="address" class="form--register__label"
+                  >Address</label
+                >
+                <input
+                  type="text"
+                  class="form--register__input--half js-form-register-input"
+                  name="address"
+                  id="address"
+                  placeholder="What is your address?"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+            </div>
+            <div class="form--register__box form--register__singlebox">
+              <label for="phnumber" class="form--register__label"
+                >Phone Number</label
+              >
+              <input
+                type="text"
+                name="phnumber"
+                id="phnumber"
+                class="form--register__input js-form-register-input"
+                placeholder="What is your phone number?"
+                required
+              />
+              <p class="form-text__error">&nbsp;</p>
+
+            </div>
+            <div class="form--register__cbox">
+              <input
+                type="checkbox"
+                id="tos"
+                name="tos"
+                class="form--register__checkbox js-form-register-input"
+              />
+              <label for="tos" class="form--register__checkbox-label"
+                >I agree to these terms and services</label
+              >
+              <p class="form-text__error">&nbsp;</p>
+            </div>
+            <button
+              class="
+                button button--orange button__rounded
+                form--register__button
+              "
+              type="submit"
+            >
+              Register now!
+            </button>
+          </form>
+          <a href="#" class="modal-register__redirect js-redirect-to-login"
+            >Already have account? Log in!</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal-successfuly">
+      <div class="modal--successfully">
+        <div class="modal--successfully__container">
+          <i class="fas fa-check modal--successfully__icon"></i>
+          <h3>Hello again!</h3>
+          <h3>You are <span class="modal--successfully__green">successfully</span> logged in!</h3>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal-delete">
+      <div class="modal--delete">
+        <div class="modal--delete__container">
+          <h3>Are you sure you want to delete?</h3>
+          <div class="modal--delete__buttons">
+            <button class="button button__rounded button--delete js-delete-button">Delete</button>
+            <button class="button button__rounded button--cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

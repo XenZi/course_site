@@ -1,0 +1,69 @@
+.search {
+  position: absolute;
+  top: 100%;
+  margin-top: 20px;
+  width: 100%;
+  display: none;
+  border: 1px solid $color--gray;
+}
+
+.search--active {
+  @include breakpoint("touch") {
+    display: block;
+  }
+}
+.search__container {
+  background: white;
+  padding: 14px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.search--active {
+  display: block;
+}
+
+.search__results {
+  background-color: white;
+  padding: 14px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search__card {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #f0ecee;
+}
+
+.search__card-image {
+  width: 150px;
+}
+
+.search__card-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  color: $color--dark-gray;
+}
+
+.search__card-title {
+  font-size: 20px;
+  color: $color--dark-gray;
+}
+.search__card p {
+  font-weight: lighter;
+  font-size: 14px;
+  &:last-of-type {
+    font-weight: normal;
+  }
+}
+
+.search__card--highlight {
+  background-color: yellow;
+}
+
+

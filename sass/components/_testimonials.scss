@@ -1,0 +1,63 @@
+.testimonials__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials {
+  background-color: $color--gray;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.testimonial {
+  width: 100%;
+  margin-right: 50px;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  @include breakpoint("phone") {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  @include breakpoint("tablet") {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+
+.testimonial__upper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.testimonial__image {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.testimonial__user {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial__name {
+  font-weight: bold;
+  color: $color--blue;
+  margin-bottom: 10px;
+}
+
+.testimonial__profession {
+  font-size: 16px;
+  color: $color--dark-gray;
+}
+
+.testimonial__desc {
+  font-size: 14px;
+}

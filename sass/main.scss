@@ -1,0 +1,49 @@
+// ABSTRACTS
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// BASE
+
+@import "base/config";
+@import "base/reset";
+@import "base/typography";
+
+// COMPONENTS
+
+@import "components/buttons";
+@import "components/cards";
+@import "components/icons";
+@import "components/course";
+@import "components/objective";
+@import "components/search";
+@import "components/modals";
+@import "components/basket";
+@import "components/testimonials";
+@import "components/slider";
+@import "components/table";
+@import "components/loader";
+@import "components/contact";
+
+// LAYOUT
+
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/register";
+@import "layout/login";
+@import "layout/banner";
+@import "layout/htop";
+@import "layout/learn";
+
+// PAGES
+
+@import "pages/admin";
+@import "pages/course";
+@import "pages/edit-course";
+@import "pages/edit-user";
+@import "pages/home";
+@import "pages/user";
+@import "pages/courses";
+@import "pages/basketpage";

@@ -1,0 +1,87 @@
+.user-section {
+  padding: 100px 0;
+}
+
+.user-edit__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+
+  @include breakpoint("touch") {
+    width: 100%;
+  }
+}
+
+.user-edit__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-edit__name {
+  margin-left: 20px;
+  font-size: 32px;
+}
+
+.user-edit__bottom {
+  width: 45%;
+
+  @include breakpoint("touch") {
+    width: 50%;
+  }
+}
+
+.edit-user__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-user__box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.edit-user__box--single {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+
+  @include breakpoint("touch") {
+    width: initial;
+  }
+}
+
+.edit-user__input {
+  height: 2rem;
+  width: 12rem;
+  padding: 16px 5px;
+}
+.edit-user__input--width {
+  width: 100%;
+
+  @include breakpoint("touch") {
+    align-self: center;
+    width: 12rem;
+  }
+}
+.edit-user__label {
+  margin-bottom: 10px;
+}
+
+.edit-user__button {
+  padding: 16px 20px;
+  width: 12rem;
+  @include breakpoint("touch") {
+    margin: 10px 0;
+  }
+}
+
+.form--edit__user {
+  width: 550px;
+}

@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @include breakpoint("touch") {
+    height: 60px;
+    position: fixed;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header--active {
+  position: fixed;
+  top: 0;
+  background: white;
+  height: unset;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 11;
+  @include breakpoint("touch") {
+    position: fixed;
+    top: 0;
+    background: white;
+    height: unset;
+  }
+}
+
+.header__logo {
+  padding: 20px 0;
+  cursor: pointer;
+  width: 250px;
+
+  @include breakpoint("touch") {
+    width: 150px;
+  }
+}

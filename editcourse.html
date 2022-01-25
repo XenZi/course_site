@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Educave | Edit Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./img/Educave.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+  </head>
+
+  <body>
+    <div class="loader__container">
+      <div class="loader"></div>
+    </div>
+    <div class="htop">
+      <div class="wrapper">
+        <div class="htop__container">
+          <div class="htop__left">
+            <div class="htop__block">
+              <i class="far fa-envelope icon htop__icon"></i>
+              <a href="#" class="htop__link">info@educave.com</a>
+            </div>
+          </div>
+          <div class="htop__right">
+            <div class="htop__block">
+              <a class="htop__link htop__register js-htop-register"
+                >Register</a
+              >
+            </div>
+            <div class="htop__block">
+              <button class="button button--orange htop__login js-htop-login">
+                <i class="far fa-user icon htop__icon"></i>Log In
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__container">
+          <img src="./img/Educave.svg" alt="EduCave" class="header__logo" />
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="./index.html#topCourses" class="nav__link"
+                  >Top Courses</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="./courses.html" class="nav__link">Courses</a>
+              </li>
+              <li class="nav__item">
+                <a href="#testimonial" class="nav__link">Testimonials</a>
+              </li>
+              <li class="nav__item">
+                <a href="./admin.html" class="nav__link">Admin</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="nav__menu">
+            <li class="nav__menu-item js-nav-search">
+              <i class="fas fa-search nav__icon"></i>
+            </li>
+            <li class="nav__menu-item js-user">
+              <i class="far fa-user nav__icon"></i>
+            </li>
+            <li class="nav__menu-item">
+              <i class="fas fa-shopping-basket nav__icon"></i>
+              <div class="basket">
+
+              </div>
+            </li>
+            <li class="nav__menu-item nav__burger js-burger">
+              <i class="fas fa-bars nav__icon"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="search">
+        <div class="wrapper">
+          <div class="search__container">
+            <form action="#" class="form form--nav">
+              <input type="text" class="form--nav__input" />
+              <button class="form--nav__search">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <div class="search__results">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="edit-course">
+        <div class="wrapper">
+          <div class="edit-course__container">
+            <div class="edit-course__left">
+              <img src="img/cardbg.jpg" alt="" class="edit-course__image" />
+              <ul class="edit-course__left-list">
+                <li class="edit-course__item">
+                  <p class="edit-course__item-left">
+                    <i class="fas fa-table edit-course__item-icon"></i>ID
+                  </p>
+                  <p class="edit-course__item-right">#063631</p>
+                </li>
+                <li class="edit-course__item">
+                  <p class="edit-course__item-left">
+                    <i class="fas fa-signature edit-course__item-icon"></i>Title
+                  </p>
+                  <p class="edit-course__item-right">JavaScript Development</p>
+                </li>
+                <li class="edit-course__item">
+                  <p class="edit-course__item-left">
+                    <i class="fas fa-school edit-course__item-icon"></i>Enrolled
+                  </p>
+                  <p class="edit-course__item-right">2266</p>
+                </li>
+                <li class="edit-course__item">
+                  <p class="edit-course__item-left">
+                    <i class="fab fa-gratipay edit-course__item-icon"></i>Rating
+                  </p>
+                  <p class="edit-course__item-right">4.50</p>
+                </li>
+              </ul>
+              <button
+                class="
+                  button button__rounded button--view
+                  edit-course__view-course
+                  js-view-course
+                "
+              >
+                View
+              </button>
+              <button
+                class="
+                  button button__rounded button--delete
+                  edit-course__delete-course
+                  js-cta-delete-button
+                "
+              >
+                Delete
+              </button>
+            </div>
+            <div class="edit-course__right">
+              <form action="#" class="form form--edit__course">
+                <div class="row edit-course__row">
+                  <div class="edit-course__singlebox">
+                    <h3 class="edit-course__form-title">Edit Course Info</h3>
+                  </div>
+                </div>
+                <div class="row edit-course__row">
+                  <div class="edit-course__singlebox">
+                    <label for="ctitle" class="edit-course__label">
+                      Course Title
+                    </label>
+                    <input
+                      type="text"
+                      name="ctitle"
+                      id="ctitle"
+                      class="edit-course__input"
+                      placeholder="Edit your course title..."
+                    />
+                    <p class="form-text__error">&nbsp;</p>
+                  </div>
+                  <div class="edit-course__singlebox">
+                    <label for="category" class="edit-course__label">
+                      Category
+                    </label>
+                    <select
+                      type="text"
+                      name="category"
+                      id="category"
+                      class="edit-course__input"
+                      placeholder="Edit your course category..."
+                    >
+                      <option selected disabled>Select your category</option>
+                      <option value="webdev">Web Programiranje</option>
+                      <option value="oop">Objektno programiranje</option>
+                      <option value="algorithm">Algoritmi</option>
+                      <option value="structures">Strukture podataka</option>
+                      <option value="database">Baze podataka</option>
+                    </select>
+                    <p class="form-text__error">&nbsp;</p>
+                  </div>
+                </div>
+                <div class="row edit-course__row">
+                  <div class="edit-course__singlebox">
+                    <label for="lnumber" class="edit-course__label">
+                      Lectures Number
+                    </label>
+                    <input
+                      type="number"
+                      name="lnumber"
+                      id="lnumber"
+                      class="edit-course__input"
+                      placeholder="Write down your lecture number..."
+                    />
+                    <p class="form-text__error">&nbsp;</p>
+                  </div>
+                  <div class="edit-course__singlebox">
+                    <label for="price" class="edit-course__label">
+                      Price
+                    </label>
+                    <input
+                      type="number"
+                      name="price"
+                      id="price"
+                      class="edit-course__input"
+                      placeholder="Write down your new course price"
+                    />
+                    <p class="form-text__error">&nbsp;</p>
+                  </div>
+                </div>
+                <div class="row edit-course__row">
+                  <div class="edit-course__singlebox">
+                    <label for="language" class="edit-course__label">
+                      Language
+                    </label>
+                    <input
+                      type="text"
+                      name="language"
+                      id="language"
+                      class="edit-course__input"
+                      placeholder="What is your course language now?"
+                    />
+                    <p class="form-text__error">&nbsp;</p>
+                  </div>
+                  <div class="edit-course__singlebox">
+                    <label for="certification" class="edit-course__label">
+                      Certification
+                    </label>
+                    <select
+                      type="text"
+                      name="certification"
+                      id="certification"
+                      class="edit-course__input"
+                      placeholder="Is your course certified?"
+                    >
+                      <option selected disabled>Select your category</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <p class="form-text__error">&nbsp;</p>
+                  </div>
+                </div>
+                <div class="row edit-course__row">
+                  <div class="edit-course__singlebox">
+                    <label for="description" class="edit-course__label">
+                      Description
+                    </label>
+                    <textarea
+                      name="description"
+                      id="description"
+                      cols="20"
+                      rows="9"
+                      class="edit-course__input edit-course__textarea "
+                    ></textarea>
+                    <p class="form-text__error">&nbsp;</p>
+                  </div>
+                  <div class="edit-course__singlebox edit-course__doublebox">
+                    <div class="edit-course__double">
+                      <label for="editDate" class="edit-course__label">
+                        Edit date
+                      </label>
+                      <input
+                        type="date"
+                        name="editDate"
+                        id="editDate"
+                        class="edit-course__input"
+                        placeholder="What is your edit date?"
+                      />
+                      <p class="form-text__error">&nbsp;</p>
+                    </div>
+                    <div class="edit-course__double">
+                      <label for="link" class="edit-course__label">
+                        Image Link
+                      </label>
+                      <input
+                        type="url"
+                        name="link"
+                        id="link"
+                        class="edit-course__input"
+                        placeholder="Place your link"
+                      />
+                      <p class="form-text__error">&nbsp;</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row edit-course__row">
+                  <div class="edit-course__singlebox">
+                    <button class="button edit-course__submit">Submit</button>
+                  </div>
+                  <div class="edit-course__singlebox">
+                    <button class="button edit-course__reset js-form-reset" type="reset">
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__container">
+          <div class="row row--footer">
+            <div class="footer__column">
+              <img src="./img/Educave.svg" class="footer__logo" alt="" />
+              <p class="footer__paragraph">
+                Educave is new online platform for e-learning. We're trying to
+                make a large amount of our clients satisfied and make this world
+                a better place. If you are interested in IT, check out our
+                courses!
+              </p>
+              <ul class="footer__list--row">
+                <li class="footer__item">
+                  <i class="fab fa-facebook-f footer__media"></i>
+                </li>
+                <li class="footer__item">
+                  <i class="fab fa-instagram footer__media"></i>
+                </li>
+                <li class="footer__item">
+                  <i class="fab fa-twitter footer__media"></i>
+                </li>
+                <li class="footer__item">
+                  <i class="fab fa-youtube footer__media"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h4 class="column__title">Address</h4>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <i class="fas fa-map-signs footer__icon"></i>
+                  <p>1254 Granville Lane, New Jersey, New Jesery, USA</p>
+                </li>
+                <li class="footer__item">
+                  <i class="fas fa-phone footer__icon"></i>
+                  <p>1254 Granville Lane, New Jersey, New Jesery, USA</p>
+                </li>
+                <li class="footer__item">
+                  <i class="far fa-envelope icon footer__icon"> </i>
+                  <p>mail@mail.com</p>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h4 class="column__title">Courses</h4>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Course</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__bottom">
+      <div class="wrapper">
+        <div class="footer__row footer__row--bottom">
+          <p class="footer__copyright">Copyright 2021 Educave &copy;</p>
+          <a href="https://www.rilak.dev" class="footer__developer"
+            >Designed by <span>RilakDev</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="modal js-modal-login">
+      <div class="modal--login">
+        <button class="modal--login__close js-modal-close">
+          <i class="fas fa-window-close"></i>
+        </button>
+        <div class="modal--login__left"></div>
+        <div class="modal--login__right">
+          <div class="modal--login__info">
+            <h4 class="modal--login__subtitle">Welcome back</h4>
+            <h3 class="modal--login__title">Log into your account</h3>
+          </div>
+          <form action="#" class="form form--login">
+            <div class="form--login__box">
+              <label for="email" class="form--login__label"
+                >E-mail or Username</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form--login__input"
+                placeholder="Enter your e-mail or username"
+                required
+              />
+              <p class="form-text__error">&nbsp;</p>
+            </div>
+            <div class="form--login__box">
+              <div class="form--login__label-box">
+                <label for="password" class="form--login__label">Password</label>
+                <a href="#">Forgot your password?</a>
+              </div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form--login__input"
+                placeholder="Enter your password"
+                required
+              />
+              <p class="form-text__error"></p>
+              <button
+                class="
+                  button button__rounded button--orange
+                  form--login__submit
+                "
+                type="submit"
+              >
+                Log in now
+              </button>
+            </div>
+          </form>
+          <p class="modal-login__desc">
+            Not registered yet?
+            <a href="#" class="modal-login__redirect js-redirect-to-register"
+              >Register now!</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal-register">
+      <div class="modal--register">
+        <button class="modal--register__close js-modal-close">
+          <i class="fas fa-window-close"></i>
+        </button>
+        <div class="modal--register__left"></div>
+        <div class="modal--register__right">
+          <div class="modal--register__info">
+            <h3 class="modal--register__title">Sign Up</h3>
+          </div>
+          <form action="#" class="form form--register">
+            <div class="form--register__box">
+              <div class="form--register__halfbox">
+                <label for="name" class="form--register__label">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form--register__input--half js-form-register-input"
+                  name="name"
+                  placeholder="What is your name?"
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+              <div class="form--register__halfbox">
+                <label for="lastname" class="form--register__label"
+                  >Last name</label
+                >
+                <input
+                  id="lastname"
+                  type="text"
+                  class="form--register__input--half js-form-register-input"
+                  name="name"
+                  placeholder="What is your lastname?"
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+            </div>
+            <div class="form--register__box form--register__singlebox">
+              <label for="username" class="form--register__label"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form--register__input js-form-register-input"
+                name="username"
+                id="username"
+                placeholder="What is your username?"
+                required
+              />
+              <p class="form-text__error">&nbsp;</p>
+            </div>
+            <div class="form--register__box">
+              <div class="form--register__halfbox">
+                <label for="mail" class="form--register__label">Email</label>
+                <input
+                  type="email"
+                  class="form--register__input--half js-form-register-input"
+                  id="mail"
+                  name="mail"
+                  placeholder="What is your e-mail?"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+              <div class="form--register__halfbox">
+                <label for="password" class="form--register__label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form--register__input--half js-form-register-input"
+                  name="password"
+                  id="password"
+                  placeholder="What is your password?"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+            </div>
+            <div class="form--register__box">
+              <div class="form--register__halfbox">
+                <label for="dob" class="form--register__label"
+                  >Date of birth</label
+                >
+                <input
+                  type="date"
+                  class="form--register__input--half js-form-register-input"
+                  name="dob"
+                  id="dob"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+              <div class="form--register__halfbox">
+                <label for="address" class="form--register__label"
+                  >Address</label
+                >
+                <input
+                  type="text"
+                  class="form--register__input--half js-form-register-input"
+                  name="address"
+                  id="address"
+                  placeholder="What is your address?"
+                  required
+                />
+                <p class="form-text__error">&nbsp;</p>
+              </div>
+            </div>
+            <div class="form--register__box form--register__singlebox">
+              <label for="phnumber" class="form--register__label"
+                >Phone Number</label
+              >
+              <input
+                type="text"
+                name="phnumber"
+                id="phnumber"
+                class="form--register__input js-form-register-input"
+                placeholder="What is your phone number?"
+                required
+              />
+              <p class="form-text__error">&nbsp;</p>
+
+            </div>
+            <div class="form--register__cbox">
+              <input
+                type="checkbox"
+                id="tos"
+                name="tos"
+                class="form--register__checkbox js-form-register-input"
+              />
+              <label for="tos" class="form--register__checkbox-label"
+                >I agree to these terms and services</label
+              >
+              <p class="form-text__error">&nbsp;</p>
+            </div>
+            <button
+              class="
+                button button--orange button__rounded
+                form--register__button
+              "
+              type="submit"
+            >
+              Register now!
+            </button>
+          </form>
+          <a href="#" class="modal-register__redirect js-redirect-to-login"
+            >Already have account? Log in!</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal-successfuly">
+      <div class="modal--successfully">
+        <div class="modal--successfully__container">
+          <i class="fas fa-check modal--successfully__icon"></i>
+          <h3>Hello again!</h3>
+          <h3>You are <span class="modal--successfully__green">successfully</span> logged in!</h3>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal-delete">
+      <div class="modal--delete">
+        <div class="modal--delete__container">
+          <h3>Are you sure you want to delete?</h3>
+          <div class="modal--delete__buttons">
+            <button class="button button__rounded button--delete js-delete-button">Delete</button>
+            <button class="button button__rounded button--cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

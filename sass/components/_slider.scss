@@ -1,0 +1,33 @@
+.slider {
+  display: flex;
+  margin-top: 40px;
+}
+.slide {
+  height: 10px;
+  width: 10px;
+  background-color: $color--dark-gray;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.slide--active {
+  width: 25px;
+  background-color: $color--blue;
+}
+.slider--visible {
+  transition: all 0.3s ease-out;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  height: auto;
+  transform: translateX(0%);
+}
+
+.slider--none {
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(50%);
+  height: 0;
+}

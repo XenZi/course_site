@@ -1,0 +1,136 @@
+.table {
+  width: 100%;
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+.table__row,
+.table__row--course {
+  padding: 10px;
+  border-bottom: 2px solid $color--gray;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    background-color: $color--gray;
+  }
+}
+
+.table__row--course {
+  cursor: initial;
+}
+
+.table__row--heading {
+  background-color: $color--blue;
+
+  &:hover {
+    background-color: $color--blue;
+  }
+}
+
+.table__heading {
+  padding: 8px;
+  color: $color--gray;
+  text-align: left;
+  width: 100%;
+  min-width: 100px;
+}
+
+.table__data {
+  padding: 8px;
+  color: $color--dark-gray;
+  display: inherit;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  font-weight: lighter;
+  min-width: 100px;
+}
+
+.table__edit {
+  padding: 10px 14px;
+  background-color: $color--orange;
+  color: $color--gray;
+
+  &:hover {
+    background-color: #b93d17;
+  }
+}
+
+.table--none {
+  display: none;
+}
+
+.table__delete {
+  padding: 10px 14px;
+  background-color: red;
+  color: $color--gray;
+
+  &:hover {
+    background-color: rgb(163, 22, 22);
+  }
+}
+
+.table__view {
+  padding: 10px 14px;
+  background-color: $color--blue;
+  color: $color--gray;
+  &:hover {
+    background-color: #030f22;
+  }
+}
+
+.table--cart {
+  cursor: initial;
+}
+
+.table--cart__row {
+  padding: 15px;
+  border-bottom: 2px solid $color--gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:first-of-type {
+    background-color: $color--blue;
+  }
+}
+
+.table--cart__heading {
+  color: $color--gray;
+}
+
+.table--cart__data {
+  min-width: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.table--cart__item-image {
+  width: 100%;
+  padding: 15px;
+}
+
+.table--cart__item-form input {
+  width: 30%;
+  align-self: center;
+  padding: 10px 3px;
+}
+
+.table--cart__data-trash {
+  background: none;
+  border: none;
+}
+
+.table--cart__quantity {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+
+tbody .table--cart__row:first-of-type {
+  background-color: white;
+}

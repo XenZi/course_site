@@ -1,0 +1,122 @@
+.nav {
+  height: 100%;
+
+  @include breakpoint("touch") {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    left: 0%;
+    top: 60px;
+    width: 50%;
+    background: white;
+    height: 100vh;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.nav--active {
+  @include breakpoint("touch") {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: unset;
+    z-index: 55555;
+  }
+}
+
+.nav__list {
+  display: flex;
+  height: 100%;
+
+  @include breakpoint("touch") {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 44;
+  }
+}
+
+.nav__item {
+  margin: 0 10px;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  @include breakpoint("touch") {
+    margin: 0;
+    margin: 20px 30px;
+  }
+}
+
+.nav__link {
+  color: $color--dark-gray;
+  text-transform: uppercase;
+  font-weight: 500;
+  &:hover {
+    color: $color--orange;
+  }
+}
+
+.nav__icon {
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    color: $color--orange;
+  }
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.nav__menu-item {
+  margin: 0 10px;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .basket {
+    display: flex;
+  }
+
+  &:hover i {
+    color: $color--orange;
+  }
+}
+
+.nav__burger {
+  display: none;
+  @include breakpoint("touch") {
+    display: inline;
+    align-self: center;
+  }
+}
+
+.basket__number {
+  position: absolute;
+  font-size: 12px;
+  background: $color--blue;
+  color: $color--gray;
+  padding: 5px;
+  top: -20px;
+  border-radius: 50%;
+  left: 10px;
+}
+
+.nav__avatar {
+  height: 16px;
+  width: 16px;
+}

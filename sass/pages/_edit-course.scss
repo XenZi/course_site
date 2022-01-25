@@ -1,0 +1,114 @@
+.edit-course {
+  padding: 100px 0;
+}
+
+.edit-course__container {
+  display: flex;
+
+  @include breakpoint("phone") {
+    flex-direction: column;
+  }
+}
+
+.edit-course__left {
+  flex-basis: 35%;
+  background-color: #fff;
+  background: #fff;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border-radius: 15px;
+  padding: 45px 20px;
+  height: fit-content;
+  margin-right: 20px;
+}
+
+.edit-course__image {
+  width: 100%;
+}
+
+.edit-course__left-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-course__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0ecee;
+  color: $color--dark-gray;
+}
+
+.edit-course__item-icon {
+  margin-right: 5px;
+}
+
+.edit-course__view-course {
+  margin-top: 20px;
+}
+
+.edit-course__delete-course {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.edit-course__right {
+  flex-basis: 70%;
+  padding: 20px;
+}
+
+.edit-course__row {
+  width: 100%;
+}
+
+.edit-course__singlebox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+.edit-course__label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.edit-course__input {
+  width: 100%;
+  padding: 10px 5px;
+  height: 2.8rem;
+}
+
+.edit-course__double {
+  margin-top: 20px;
+}
+
+.edit-course__form-title {
+  font-size: 32px;
+}
+
+.edit-course__submit {
+  padding: 14px 16px;
+  background: $color--orange;
+  color: $color--gray;
+  width: 100%;
+}
+
+.edit-course__reset {
+  padding: 14px 16px;
+  background: $color--dark-gray;
+  color: $color--gray;
+}
+
+.edit-course__doublebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.edit-course__textarea {
+  padding: 10px 5px;
+  resize: none;
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+}

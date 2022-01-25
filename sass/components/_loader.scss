@@ -1,0 +1,39 @@
+.loader__container {
+  background-color: $color--gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5550;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.loader {
+  border: 8px solid $color--dark-gray;
+  border-top: 8px solid $color--orange;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader__container--none {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

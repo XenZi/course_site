@@ -1,0 +1,65 @@
+.basket-page__container {
+  display: flex;
+
+  @include breakpoint("phone") {
+    flex-direction: column;
+  }
+}
+
+.basket-page__left {
+  flex-basis: 70%;
+  margin-right: 30px;
+  @include breakpoint("phone") {
+    overflow: scroll;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.basket-page__right {
+  flex-basis: 30%;
+  background-color: white;
+  border: 1px solid #f0ecee;
+  padding: 20px;
+  height: fit-content;
+}
+
+.cart-totals {
+  display: flex;
+  flex-direction: column;
+}
+.cart-totals__title {
+  margin-bottom: 20px;
+}
+.cart-totals__box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-bottom: 1px solid #f0ecee;
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: 20px;
+  }
+}
+
+.cart-totals__box-title {
+  font-size: 18px;
+}
+.cart-totals__price {
+  color: $color--dark-gray;
+
+  &:last-of-type {
+    color: $color--blue;
+  }
+}
+
+.cart-totals__button {
+  padding: 14px 16px;
+  color: $color--gray;
+  background-color: $color--blue;
+}
+
+.table--cart__data-trash {
+  color: $color--dark-gray;
+}

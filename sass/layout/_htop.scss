@@ -1,0 +1,100 @@
+.htop {
+  padding: 25px 0;
+  height: 40px;
+  background-color: $color--blue;
+
+  @include breakpoint("touch") {
+    height: 100px;
+    display: none;
+  }
+}
+
+.htop__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  @include breakpoint("phone") {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.htop__left {
+  @include breakpoint("phone") {
+    align-self: flex-start;
+    margin-bottom: 15px;
+  }
+}
+
+.htop__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.htop_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.htop__link {
+  color: $color--gray;
+  font-weight: 400;
+}
+
+.htop__icon {
+  color: $color--orange;
+}
+
+.htop__register {
+  margin-right: 20px;
+}
+
+.htop__login {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: $color--gray;
+    color: $color--orange;
+  }
+
+  &:hover i {
+    color: $color--orange;
+  }
+}
+
+.htop__login i {
+  color: $color--gray;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.htop__block--column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+
+  a {
+    color: $color--white;
+    font-size: 14px;
+    margin-bottom: 5px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.htop__user-avatar {
+  height: 35px;
+}

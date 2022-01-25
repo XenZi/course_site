@@ -1,0 +1,66 @@
+.courses {
+  @include breakpoint("phone") {
+    padding-top: 25px;
+  }
+}
+
+.courses__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.courses__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include breakpoint("phone") {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.courses__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.courses__number {
+  font-size: 18px;
+  font-weight: normal;
+
+  @include breakpoint("phone") {
+    margin-bottom: 20px;
+  }
+}
+
+.courses__amount {
+  font-weight: bold;
+  color: $color--blue;
+}
+
+.courses__bottom {
+  margin-top: 50px;
+}
+
+.courses__container .row {
+  margin-bottom: 30px;
+}
+
+.courses__container .row .card--course:last-child {
+  margin-right: 0;
+}
+
+.course__loadmore {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: $color--blue;
+  color: $color--gray;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: $color--blue;
+    background-color: $color--gray;
+    border: 1px solid $color--orange;
+  }
+}

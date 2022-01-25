@@ -1,0 +1,59 @@
+.button {
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  &--transparent {
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  &--orange {
+    background-color: $color--orange;
+  }
+}
+
+.button__rounded {
+  padding: 14px 20px;
+  transition: all 0.3s ease-out;
+  border: 1px solid transparent;
+  &--outline {
+    border-radius: 20px;
+
+    &-orange {
+      border: 1px solid $color--orange;
+    }
+  }
+
+  &:hover {
+    border: 1px solid $color--dark-gray;
+  }
+}
+
+.button--edit {
+  background-color: $color--orange;
+  color: $color--gray;
+}
+
+.button--delete {
+  background-color: rgb(185, 53, 53);
+  color: $color--gray;
+}
+
+.button--view {
+  background-color: $color--blue;
+  color: $color--gray;
+  width: 100%;
+}
+
+.button--quantity {
+  color: $color--dark-gray;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+
+.button--successfuly-bought {
+  background-color: green;
+}

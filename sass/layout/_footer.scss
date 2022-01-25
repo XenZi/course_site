@@ -1,0 +1,147 @@
+.footer {
+  background-color: $color--gray;
+}
+
+.footer__container {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  @include breakpoint("touch") {
+    flex-direction: column;
+  }
+}
+
+.footer__column {
+  margin-right: 20px;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  min-height: 150px;
+  @include breakpoint("touch") {
+    height: unset;
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer__paragraph {
+  width: 300px;
+  margin-bottom: 30px;
+
+  @include breakpoint("touch") {
+    width: unset;
+  }
+}
+
+.footer__logo {
+  width: 200px;
+  margin-bottom: 30px;
+
+  @include breakpoint("touch") {
+    width: 200px;
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  @include breakpoint("touch") {
+    margin-top: 0;
+  }
+}
+
+.footer__list--row {
+  display: flex;
+  width: 60%;
+  .footer__item {
+    margin-right: 10px;
+  }
+}
+
+.footer__media {
+  font-size: 20px;
+  cursor: pointer;
+  color: $color--dark-gray;
+  transition: all 0.3s ease-out;
+  &:hover {
+    color: $color--orange;
+  }
+}
+
+.column__title {
+  color: $color--blue;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 24px;
+  &::after {
+    margin-top: 5px;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: $color--orange;
+  }
+}
+
+.footer__item {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.footer__icon {
+  margin-right: 10px;
+  color: $color--dark-gray;
+}
+
+.footer__item p {
+  color: $color--dark-gray;
+}
+
+.footer__link {
+  color: $color--dark-gray;
+
+  &:hover {
+    text-decoration: underline;
+    color: $color--orange;
+  }
+}
+
+.footer__bottom {
+  background-color: $color--gray;
+  padding: 20px 0;
+  border-top: 1px solid #f0ecee;
+}
+
+.footer__row--bottom {
+  margin-bottom: 0;
+}
+
+.footer__developer {
+  color: $color--dark-gray;
+
+  span {
+    color: $color--orange;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

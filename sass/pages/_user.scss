@@ -1,0 +1,72 @@
+.user {
+  padding: 100px 0;
+}
+
+.user__container {
+  display: flex;
+
+  @include breakpoint("phone") {
+    flex-direction: column;
+  }
+}
+
+.user__left {
+  flex-basis: 25%;
+  margin-right: 50px;
+
+  @include breakpoint("touch") {
+    display: none;
+  }
+}
+
+.user__right {
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+.user__profile-title {
+  margin-bottom: 20px;
+}
+
+.user__topinfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user__topinfo-title {
+  margin-left: 20px;
+}
+
+.user__nav-item {
+  margin: 30px 0;
+  padding: 15px 0;
+  border-right: 1px solid $color--orange;
+
+  @include breakpoint("phone") {
+    border-right: 0;
+  }
+}
+
+.user__nav-item a {
+  color: $color--dark-gray;
+}
+
+.user__nav-item a i {
+  margin-right: 10px;
+}
+
+.user__item {
+  margin-bottom: 15px;
+}
+
+.user__item p {
+  color: $color--dark-gray;
+  margin: 10px 0;
+}
+
+.user__buttons button {
+  padding: 16px 20px;
+  width: 150px;
+}

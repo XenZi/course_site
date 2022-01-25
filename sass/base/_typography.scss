@@ -1,0 +1,65 @@
+/* 
+font-family: 'Nunito', sans-serif;
+font-family: 'Rubik', sans-serif;
+*/
+
+body {
+  font-size: $font--default-size;
+  font-family: "Rubik", sans-serif;
+  @include breakpoint("phone") {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: $font--weight-bold;
+}
+
+h1 {
+  font-size: $font--h1;
+  line-height: 62.5px;
+
+  @include breakpoint("phone") {
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-size: $font--h2;
+  @include breakpoint("phone") {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: $font--h3;
+  @include breakpoint("phone") {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  font-size: $font--h4;
+  @include breakpoint("phone") {
+    font-size: 16px;
+  }
+}
+
+p {
+  line-height: 20px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text--orange {
+  color: $color--orange;
+}
