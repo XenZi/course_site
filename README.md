@@ -21,4 +21,7 @@
  - Dynamic loaders
  - Dynamic Search
  - Dynamic cards
-- Modals
+ - Modals 
+
+Live:
+https://wonderful-mccarthy-8f3234.netlify.app/index.html
